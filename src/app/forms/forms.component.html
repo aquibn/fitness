@@ -1,0 +1,23 @@
+
+
+
+<div class="outer">
+  <div class="navbar">
+    <div class="items" (click)="route()"
+     > Home        </div>
+    <div class="items"  (click)="route1()"    > events      </div>
+    <div class="items" (click)="route2()"> fitness tracker </div>
+    <div class="items" (click)="route3()"> contact     </div>
+    <div class="items" (click)="route4()"> signup     </div>
+
+    <div class="items"  >   <input placeholder="   search  " [(ngModel)]="ip" class="gcse-search" type="text">  <span (click)="search()" class="material-icons-outlined">
+      search
+      </span>        </div>
+ </div>
+
+</div>
+<div >
+  {{search()}}
+</div>
+
+<router-outlet></router-outlet>

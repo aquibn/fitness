@@ -1,0 +1,9 @@
+.chk{
+  display:flex;
+ margin-left: 450px;
+  justify-content: center;
+  background-color: rgb(9, 214, 214);
+  color:rgb(6, 17, 7);
+  height:25vh;
+  width:30vw;
+}

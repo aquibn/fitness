@@ -1,0 +1,38 @@
+.outer{
+  background-color:fuchsia;
+  border: 10%;
+
+}
+.topinput{
+  background-color:rgb(35, 125, 167);
+  text-align:center;
+
+}
+
+.matform{
+color:rgb(255, 21, 0);
+background-color:magenta
+
+}
+.rowdata{
+  color:yellow;
+  background-color:black;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  margin: 5px;
+}
+.btn{
+  color:green;
+  background-color:red;
+}
+.btnprimary{
+color:yellow;
+background-color:brown;
+}
+.inputicon{
+  background-color:rgb(101, 177, 221);
+  color:#ffc0cb;
+  margin: 3px;
+  border: 2px solid yellow;
+  }

@@ -1,0 +1,16 @@
+.outer{
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .inner{
+   text-align: center;
+   text-transform: center;
+   color:white;
+   display:block;
+   font-weight:bold;
+ }
+ .height{
+   font-size:50px;
+ }

@@ -1,0 +1,61 @@
+
+.box {
+  background-color:white;
+  width:400px;
+
+
+}
+.basicdetails {
+  display: flex;
+  justify-content: center;
+
+
+
+
+}
+
+.name{
+  border: 1px;
+  margin:3px;
+  margin-left: 25px;
+
+}
+.Contact{
+margin: 3px;
+
+}
+.options{
+  margin:3px;
+
+}
+.mor{
+  margin:10px;
+
+}
+.Surname{
+  border: 1px;
+  margin:3px;
+  margin-left: 25px;
+
+}
+.phone{
+  border: 1px;
+  margin:3px;
+  margin-left: 25px;
+
+}
+.email{
+  border: 1px;
+  margin:3px;
+  margin-left: 25px;
+
+}
+.btn{
+  margin:25px;
+  color:blueviolet;
+}
+.outer{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}

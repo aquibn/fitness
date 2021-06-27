@@ -1,0 +1,17 @@
+.outer{
+
+  display: flex;
+  justify-content: center;
+
+
+}
+.inner{
+
+  background-color: blanchedalmond;
+  width:400px;
+
+}
+.btn{
+  display:flex;
+  flex-direction:row-reverse;
+}

@@ -1,0 +1,25 @@
+.outer{
+
+justify-content: center;
+text-align:center;
+
+}
+
+.inner{
+  background-color: aquamarine;
+}
+.menu{
+  background-color:grey;
+}
+
+.formdata{
+  background-color:azure;
+  margin: 5px;
+
+}
+
+.btn{
+  width:45vw;
+  height:max-content;
+  text-align:center;
+}

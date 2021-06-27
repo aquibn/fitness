@@ -1,0 +1,138 @@
+
+<div class="outer">
+<div class="menu">
+<button mat-button [matMenuTriggerFor]="aboveMenu">Macros Amount</button>
+  <mat-menu #aboveMenu="matMenu" yPosition="below">
+      <button mat-button class="btn"><div>
+          {{macroAmount|json}}
+               </div>
+    </button>
+          </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="belowMenu">Mets</button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-button class="btn">heelo{{BMI|json}}</button>
+     </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="beforeMenu">Daily calory requirements</button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-button class="btn">{{BMI|json}}</button>
+     </mat-menu>
+
+
+  <button mat-button [matMenuTriggerFor]="afterMenu">Body Fat Percentage</button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <button mat-button class="btn">{{Fatpercent|json}}</button>
+      </mat-menu>
+</div>
+
+
+
+<div class="menu">
+  <button mat-button [matMenuTriggerFor]="aboveMenu">Ideal weight</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-button class="btn">{{idealweight|json}}</button>
+ </mat-menu>
+
+<button mat-button [matMenuTriggerFor]="belowMenu">bmi</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-button class="btn">heelo{{BMI|json}}</button>
+
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="beforeMenu">Macro Nutrients</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-button class="btn">heelo{{macronutrient|json}}</button>
+  </mat-menu>
+</div>
+
+
+
+
+ <div class="formdata" >
+   <h3>Fill data first then select menu</h3>
+   <form #form="ngForm" (ngSubmit)="api(form)" >
+     <div class="formdata">
+         <mat-form-field   >
+         <mat-label >Weight (kg)</mat-label>
+         <input type="number" matInput name="weight" ngModel  >
+        </mat-form-field>
+
+        <mat-form-field   >
+          <mat-label>Age</mat-label>
+          <input type="number" matInput name="age" ngModel   >
+        </mat-form-field>
+
+        <mat-form-field   >
+          <mat-label>Height(cm)</mat-label>
+          <input type="number" matInput name="height" ngModel   >
+        </mat-form-field>
+      </div>
+
+      <div class="formdata">
+
+
+        <mat-form-field appearance="fill">
+          <mat-label>Activity type</mat-label>
+          <mat-select name="activity" ngModel >
+            <mat-option value="1">BMR</mat-option>
+            <mat-option value="2">Sedentary: little or no exercise</mat-option>
+            <mat-option value="3">Exercise 1-3 times/week </mat-option>
+            <mat-option value="4">Exercise 4-5 times/week</mat-option>
+            <mat-option value="5">Daily exercise or intense exercise 3-4 times/week</mat-option>
+            <mat-option value="6">Intense exercise 6-7 times/week</mat-option>
+            <mat-option value="7">Very intense exercise daily, or physical job</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+          <mat-label>Goal</mat-label>
+          <mat-select name="goal" ngModel >
+            <mat-option value="maintain">maintain weight</mat-option>
+            <mat-option value="mildlose">Mild weight loss</mat-option>
+            <mat-option value="weightloss">Weight loss </mat-option>
+            <mat-option value="extremelose">Extreme weight loss</mat-option>
+            <mat-option value="mildgain">Mild weight gain</mat-option>
+            <mat-option value="weightgain">Intense exercise 6-7 times/week</mat-option>
+            <mat-option value="extremegain">Extreme weight gain</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Gender</mat-label>
+          <mat-select name="gender" ngModel >
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="formdata">
+          <mat-form-field   >
+            <mat-label>waist(cm)</mat-label>
+            <input type="number" matInput name="waist" ngModel   >
+          </mat-form-field>
+          <mat-form-field   >
+            <mat-label>neck(cm)</mat-label>
+            <input type="number" matInput name="neck" ngModel   >
+          </mat-form-field>
+          <mat-form-field   >
+            <mat-label>hip(cm)</mat-label>
+            <input type="number" matInput name="hip" ngModel   >
+          </mat-form-field>
+        </div>
+
+      </div>
+         <div>
+
+           <button mat-stroked-button type="submit" class="btna" >submit</button>
+         </div>
+
+
+
+    </form>
+
+  </div>
+
+</div>
+

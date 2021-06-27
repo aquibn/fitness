@@ -1,0 +1,55 @@
+<div class='outer'>
+  <div class='box'>
+    <div class='innerbox'>
+      <div class="basicdetail">
+        <div class="name">
+          <form class="name" #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <div class="name">
+              <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+              <input type="text" matInput ngModel [(ngModel)]="value.name" required name="name" placeholder="Name" >
+            </mat-form-field>
+          </div>
+          <div class="name">
+            <mat-form-field class="example-full-width">
+              <mat-label>Surame</mat-label>
+              <input type="text" matInput name="surname" ngModel [(ngModel)]="value.surname" required placeholder="Surname">
+            </mat-form-field>
+          </div>
+          <div class='Contact'>
+            <div class='phone'>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Telephone</mat-label>
+                <span matPrefix>+91 &nbsp;</span>
+                <input type="tel" matInput ngModel name="telephone" [(ngModel)]="value.telephone" required placeholder="555-555-1234">
+              </mat-form-field>
+            </div>
+            <div class="email">
+              <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" name="email"  ngModel [(ngModel)]="value.email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="options">
+              <mat-radio-group ngModel name="options" [(ngModel)]="value.options" required  aria-label="Select an option">
+                <mat-radio-button class='mor' value="morning">MorningSlot</mat-radio-button>
+                <mat-radio-button class='mor' value="evening">EveningSlot</mat-radio-button>
+              </mat-radio-group>
+              <mat-form-field class="example-full-width">
+                <mat-label>Emergency Contact</mat-label>
+                <span matPrefix>+91 &nbsp;</span>
+                <input type="tel" matInput name="emergency" ngModel [(ngModel)]="value.emergency" required placeholder="555-555-1234">
+              </mat-form-field>
+              <button mat-stroked-button type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,38 @@
+<div class="outer">
+
+  <div   class="topinput">
+
+    <mat-form-field  class="inputicon"  appearance="outline">
+      <mat-label >Todo Name</mat-label>
+      <input   [(ngModel)]="input"     required   matInput >
+
+
+    <mat-error  >Todo name is required</mat-error>
+
+  </mat-form-field>
+
+</div>
+<div   class='topinput'>
+  <button  (click)="take();counted() " class="btnprimary"  mat-raised-button>
+   Create Todo
+  </button>
+  <div></div>
+</div>
+
+
+<div   class='topinput'>
+  <mat-card class='middlecard' >
+
+    <mat-card    class='rowdata'   *ngFor="let name of taken; index as i" >
+                    {{taken[i]}}
+      <button   class="btn" (click)="remove(i)">delete</button>
+
+    </mat-card>
+             <br>
+    </mat-card>
+
+
+</div>
+
+</div>
+
